@@ -224,3 +224,110 @@ let value = 45;
 let result = odd_even(value);
 console.log(result);
 */
+
+
+// js-problems-part1-practice-tasks
+// Task-1: Write a function to convert temperature from Celsius to Fahrenheit.
+
+/*
+function celciusToFahrenheit(temp){
+   let fahrenheit = temp * (9 / 5) + 32;
+   return fahrenheit;
+}
+const temperature = 40;
+let result = celciusToFahrenheit(temperature);
+console.log(result, '°f');
+*/
+
+
+//Task-2: You are given an array of numbers. Count how many times the a number is repeated in the array.
+
+// sample-input: numbers = [5,6,11,12,98, 5]
+
+// find: 5
+
+// output: 2
+
+
+// sample-input:
+
+// numbers = [5,6,11,12,98, 5]
+
+// find: 25
+
+// output: 0
+
+
+/*
+function repeated(arr){
+    const target = 5;
+    let sortedArr = arr.sort();
+    let duplicate = 0;
+    for(let num of sortedArr){
+    //    console.log(num);
+       if(num === target){
+        duplicate++;
+       }
+    }
+    return duplicate;
+}
+const numbers = [5,6,11,12,98, 5];
+
+let result = repeated(numbers);
+console.log(result);
+*/
+
+// Task-3: Write a function to count the number of vowels in a string.
+
+/*
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+function countVoewl(str){
+    
+    let count = 0;
+    for(let letter of str.toLowerCase()){
+        // console.log(letter)
+
+        if(vowels.includes(letter)){
+            count++;
+        }
+    }
+    return count;
+
+}
+
+let str = "A Quick Brown Fox Jumps Over the lazy Dog";
+
+let result = countVoewl(str)
+console.log(result);
+*/
+
+
+//Task-4: Write a function to find the longest word in a given string.
+
+// sample-input: I am learning Programming to become a programmer
+
+// sample-output: Programming
+
+
+/*
+function longestWord(sentence){
+ let split = sentence.split(' ')
+    let longWord = '';
+    for(word of split){
+        if(word.length > longWord.length){
+            longWord = word;
+        }
+    }
+    return longWord;
+}
+const str = "I am learning Programming to become a programmer";
+let result = longestWord(str);
+console.log(result);
+*/
+
+//Task-5: Generate a random number between 10 to 20.
+
+/*
+let result =Math.floor(Math.random() *  10 + 11 );
+console.log(result)
+*/
