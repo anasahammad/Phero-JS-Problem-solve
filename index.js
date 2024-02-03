@@ -144,3 +144,83 @@ const reverse = statement.split(' ').reverse().join(' ');
 console.log(reverse)
 */
 
+// ---------------JS-function-practice-task
+
+// Task-1 Take four parameters. Multiply the four numbers and then return the result
+
+/*
+function multiply(num1, num2, num3, num4){
+    let result = num1 * num2 * num3 * num4;
+    return result;
+}
+console.log(multiply(4, 5, 6, 7));
+*/
+
+
+// Task-2 Take a number if the number is odd multiply it by 2 and return the result. If the number is even divide it by two and return the result.
+
+/*
+function myFunction(number){
+    if(number % 2 === 1){
+        let multiply = number * 2;
+        return multiply;
+    }
+    else {
+        let divide = number / 2;
+        return divide;
+    }
+}
+
+let result = myFunction(5);
+console.log(result)
+
+*/
+
+
+// Task-3 Write a function called make_avg() which will take an array of integers and the size of that array and return the average of those values.
+
+/*
+let total = 0 ;
+function make_avg(myArr, size){
+    for(number of myArr){
+        total = total + number; 
+    }
+    const average = total / size;
+    return average;
+}
+let myArr = [40, 45, 49, 75];
+let length = myArr.length;
+let result = make_avg(myArr, length)
+console.log(result)
+
+*/
+
+// Task-4 Write a function called count_zero() which will take a binary string (Binary string is a string which is consist of only 0 and 1) as parameter and count how many 0’s are there in that string.
+
+
+/*
+function count_zero(binaryStr){
+    const count = binaryStr.match(/0/g).length;
+    return count;
+}
+
+let binaryStr = '10110011000011110';
+let result = count_zero(binaryStr);
+console.log(result)
+*/
+
+// Task-5 Write a function called odd_even() which takes an integer value and tells whether this value is even or odd. If even return Even. If odd return Odd
+
+/*
+function odd_even(param){
+    if(param % 2 === 0){
+        return "This is an even"
+    }
+    else{
+        return "This is odd"
+    }
+}
+let value = 45;
+let result = odd_even(value);
+console.log(result);
+*/
