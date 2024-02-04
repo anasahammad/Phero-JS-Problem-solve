@@ -331,3 +331,298 @@ console.log(result);
 let result =Math.floor(Math.random() *  10 + 11 );
 console.log(result)
 */
+
+
+/***
+ * Largest number from array
+ */
+
+/*
+const age = [21, 23, 25, 27, 30, 40, 55];
+
+function getMaxAge(numbers){
+    let max = numbers[0];
+    for(let num of numbers){
+        if(num > max){
+            max = num;
+        }
+    }
+    return max;
+}
+
+let result = getMaxAge(age);
+console.log(result);
+*/
+
+/**
+ * Minimum Number/ Lowest Number
+ */
+
+/*
+const age = [21, 23, 25, 27, 30, 40, 55];
+function getMaxAge(numbers){
+    let min = numbers[0];
+    for(let num of numbers){
+        if(num < min){
+            max = num;
+        }
+    }
+    return min;
+}
+
+let result = getMaxAge(age);
+console.log(result);
+*/
+
+/**
+ * Sum of Object values in array
+ */
+
+/*
+let mobile = [
+    {name: "Samsung", price: 23000, ram: '6gb'},
+    {name: "Walton", price: 25000, ram: '8gb'},
+    {name: "Iphone-x", price: 150000, ram: '12gb'},
+]
+
+function getPhoneTotalPrice(products){
+    let total = 0;
+    for(let product of products){
+        total = total + product.price;
+    }
+    return total;
+}
+
+let result = getPhoneTotalPrice(mobile);
+console.log(result);
+*/
+
+
+/**
+ * Multi Layer Discount:
+ * first100 --> 100tk ba full
+ * 101To200 --> 90tk ba 10% discount
+ * above200 --> 70tk ba 30% discount
+ */
+
+/*
+function layerdDiscountTotal(quantity){
+    const first100Price = 100;
+    const second100Price = 90;
+    const above200Price = 70;
+
+   if(quantity <=100){
+    const first100Total = quantity * first100Price;
+    return first100Total;
+   }
+   else if(quantity <=200){
+    const first100Total = 100 * first100Price;
+    const remaimingQUantity = quantity - 100;
+    const remaimingQUantityTotal = remaimingQUantity * second100Price;
+    let total = remaimingQUantityTotal + first100Total;
+    return total;
+   }
+   else{
+    const first100Total = 100 * first100Price;
+    const second100Total =  100 * second100Price;
+    const remaimingQUantity = quantity - 200;
+    const remaimingQUantityTotal = remaimingQUantity * above200Price;
+    let total = remaimingQUantityTotal + first100Total + second100Total;
+    return total;
+   }
+}
+
+let result = layerdDiscountTotal(201);
+console.log(result);
+*/
+
+/**
+ * Simple Calculator
+ */
+
+/*
+
+function addition(num1, num2){
+    return num1 + num2;
+}
+function substraction(num1, num2){
+    return num1 - num2;
+}
+function multiplication(num1, num2){
+    return num1 * num2;
+}
+function division(num1, num2){
+    return num1 / num2;
+}
+
+function calculator(num1, num2, opearation){
+    if( opearation === 'addition'){
+        let result = addition(num1, num2);
+        return result;
+    }
+    else if( opearation === 'substraction'){
+        let result = substraction(num1, num2);
+        return result;
+    }
+    else if( opearation === 'multiplication'){
+        let result = multiplication(num1, num2);
+        return result;
+    }
+    else if( opearation === 'division'){
+        let result = division(num1, num2);
+        return result;
+    }
+    else{
+        return "Please input two numbers";
+    }
+    
+}
+
+console.log(calculator(5,6,'multiplication'));
+*/
+
+//-------------js-problems-part2-practice-tasks
+
+/**Task -1:
+Find the lowest number in the array below.
+const heights2 = [167, 190, 120, 165, 137];
+ */
+
+/*
+const heights2 = [167, 190, 120, 165, 137];
+function lowestNumber(numbers){
+    let min = numbers[0];
+    for(const num of numbers){
+        if(num < min){
+            min = num;
+        }
+    }
+    return min;
+}
+ let result = lowestNumber(heights2);
+ console.log(result)
+ */
+
+ /**Task -2:
+Find the friend with the smallest name.
+const heights2 = ['rahim', 'robin', 'rafi', 'ron', 'rashed']; 
+*/
+
+/*
+const heights2 = ['rahim', 'robin', 'rafi', 'ron', 'rashed']; 
+function smallestName(names){
+    let smallName = names[0];
+    for(let name of names){
+        if(name.length < smallName.length){
+            smallName = name;
+        }
+    }
+    return smallName;
+}
+let result = smallestName(heights2);
+console.log( result);
+*/
+
+/*
+ * Task-3:
+Your task is to calculate the total budget required to buy electronics:
+
+    laptop = 35000 tk
+    tablet = 15000 tk
+    mobile = 20000 tk
+Write a JavaScript function named calculateElectronicsBudget that takes in the number of laptop, tablets, and mobile and returns the total money required.
+ */
+
+/*
+function calculateElectronicsBudget(tab, lap, mob){
+    const laptop = 35000;
+    const tablet = 15000;
+    const  mobile = 20000;
+
+    const laptopTotal = laptop * lap;
+    const tabletTotal = tablet * tab;
+    const mobileTotal = mobile * mob;
+    const total = laptopTotal + tabletTotal + mobileTotal;
+    return total;
+}
+
+let result = calculateElectronicsBudget(1, 1, 2);
+console.log(result);
+*/
+
+/***Task-4:
+You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
+
+Input
+
+
+    const phones = [
+        { model: "PhoneA", brand: "Iphone", price: 95000 },
+        { model: "PhoneB", brand: "Samsung", price: 40000 },
+        { model: "PhoneC", brand: "Oppo", price: 26000 },
+        { model: "PhoneD", brand: "Nokia", price: 35000 },
+        { model: "PhoneE", brand: "Iphone", price: 105000 },
+        { model: "PhoneF", brand: "HTC", price: 48000 },
+    ];
+ * 
+ */
+
+ /*
+const phones = [
+        { model: "PhoneA", brand: "Iphone", price: 95000 },
+        { model: "PhoneB", brand: "Samsung", price: 40000 },
+        { model: "PhoneC", brand: "Oppo", price: 26000 },
+        { model: "PhoneD", brand: "Nokia", price: 35000 },
+        { model: "PhoneE", brand: "Iphone", price: 105000 },
+        { model: "PhoneF", brand: "HTC", price: 48000 },
+];
+
+function findAveragePhonePrice(products){
+    let total = 0;
+    for(const product of products){
+        
+         total = total + product.price;
+         
+    }
+    let average = total / products.length;
+    return average;
+}
+
+let result = findAveragePhonePrice(phones);
+console.log(result);
+*/
+
+/***Task -5: (Hard)
+For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate is the total salary has to be provided by the company in a month.
+
+ const employees = [
+            { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+            { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+            { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+            { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+        ];
+ * 
+ */
+
+/*     
+ const employees = [
+            { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+            { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+            { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+            { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+];
+
+function totalEmployeeSalary(data){
+    let totalsalary = 0;
+    for(const item of data){
+        let total = item.experience * item.increment;
+         totalsalary = totalsalary +  item.starting + total;
+       
+    }
+    return totalsalary;
+}
+let result = totalEmployeeSalary(employees);
+console.log('The company has to provide total:', result, 'tk');
+
+
+*/
