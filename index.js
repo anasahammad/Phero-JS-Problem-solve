@@ -626,3 +626,135 @@ console.log('The company has to provide total:', result, 'tk');
 
 
 */
+
+
+/**
+ * Assighnment - 4
+ * Problem - 1
+ * 1. Declare a function named calculateMoney(). It will number of tickets as input.
+ * 2. Fixed ticket price is 120 ; lets multifly this with ticket number;
+ * 3. 
+ */
+
+/*
+function calculateMoney(ticketSale) {
+if(ticketSale < 0){
+    return "Invalid Number";
+}
+else{
+    const ticketPrice = 120;
+    const darowanCoast = 500;
+    const stuffLaunchCoast = 50 * 8;
+    let totalCoast = darowanCoast + stuffLaunchCoast; 
+    let totalSale = ticketPrice * ticketSale;
+    let saveMoney = totalSale - totalCoast;
+    return saveMoney;
+}
+     
+}
+*/
+
+//Problem - 2
+
+/*
+function checkName(name) {
+
+    if(typeof name !== "string"){
+        return "invalid";
+    }
+    else{
+        const goodChar = ['a', 'y', 'i' , 'e' , 'o' , 'u', 'w'];
+        let lastChar = name.slice(-1);
+        if(goodChar.includes(lastChar.toLowerCase())){
+            return "Good Name";
+        }
+        else{
+            return "Bad Name";
+        }
+    }
+        
+}
+ 
+*/    
+
+/* Problem - 3*/
+
+
+
+// function deleteInvalids(array) {
+//     if(Array.isArray(array)){
+//         let filter = array.filter(function(num){
+//             if(typeof num === "number" && num !== isNaN){
+//                 return num;
+//             }
+              
+//         })
+//         return filter;
+//     }
+//     else{
+//         return "Invalid Array"
+//     }       
+// }
+
+
+
+
+// Problem - 4
+
+/*
+function password(obj) {
+
+        const name = obj.name;
+        const birthYear = obj.birthYear;
+        const siteName = obj.siteName;
+
+       if((obj.name === undefined) || (obj.birthYear === undefined) || (obj.siteName === undefined)) {
+        return "invalid";
+       }
+      else if(birthYear.toString().length !== 4){
+        return "invalid";
+       }
+    else{
+        let firstCapitalLetter = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
+       let uniqePassword = firstCapitalLetter +  "#" + name + "@" +  birthYear;
+        return uniqePassword;
+    }
+}
+
+*/
+
+// Problem - 5
+
+/*
+
+function monthlySavings(arr, livingCost) {
+
+    if(Array.isArray(!arr) || typeof livingCost !== "number"){
+        return "invalid input";
+    }
+    else{
+        let totalIncome = 0;
+        let tax = 0;
+        let savings = 0;
+        for(let money of arr){
+            totalIncome = totalIncome + money; 
+            if(money >= 3000){
+                tax = (money * 20) / 100; 
+                
+            }  
+           
+        }
+    
+        let totalCoast = tax + livingCost;
+        savings = totalIncome - totalCoast;
+        if(savings >= 0){
+            return savings;
+        }
+        else{
+            return "earn more"
+        }
+    }
+
+}
+
+*/
